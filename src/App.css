@@ -1,0 +1,16 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main-div{
+  background-color: blue;
+  color: blanchedalmond;
+}
+
+.second-main-div{
+  background-color: blanchedalmond;
+  color : blue;
+}
