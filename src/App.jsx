@@ -1,5 +1,7 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import ADD from './assets/ADD.jpg'
+import Subtract from './assets/Subtract.png'
 
 const VT = () =>{
   return(
@@ -19,21 +21,21 @@ const Pc = (props) => {
   );
 }
 
-// function App() {
-//   const [counter,setCounter] = useState(0);
-//   const [flag,setFlag] = useState(false);
-//   useEffect( ()=>{setCounter(0);} , [flag]);
-//   return (
-//     <>
-//       <button onClick={()=>{setCounter(counter+1)}}>+ Pannudaaa</button>
-//       <div>
-//         {counter}
-//       </div>
-//       <button onClick={()=>{setCounter(counter-1)}}>- Pannudaaa</button>
-//       <button onClick={()=>{setFlag(!flag)}}>Reset Pannudaaa</button>
-//     </>
-//   )
-// }
+function App() {
+  const [counter,setCounter] = useState(0);
+  const [flag,setFlag] = useState(false);
+  useEffect( ()=>{setCounter(0);} , [flag]);
+  return (
+    <div class="container">
+      <img src= {ADD}
+        class = "img1" onClick={()=>{setCounter(counter+1)}}></img>
+      <div class="span">{counter}</div>
+      <img src= {Subtract}
+        class = "img2" onClick={()=>{setCounter(counter-1)}}></img>
+      <button class = "reset" onClick={()=>{setFlag(!flag)}}>Reset </button>
+    </div>
+  )
+}
 
 const Darkmode = () => {
   return (
@@ -51,25 +53,25 @@ const Lightmode = () => {
   );
 }
 
-function App(){
-  const [darkmode,setDarkmode] = useState(0);
-  const [classname,setClassname] = useState("main-div");
-  useEffect(
-    () => {
-      classname == "main-div" ? setClassname("second-main-div") : setClassname("main-div");
-      console.log(classname);
-    }, [darkmode]
-  )
+// function App(){
+//   const [darkmode,setDarkmode] = useState(0);
+//   const [classname,setClassname] = useState("main-div");
+//   useEffect(
+//     () => {
+//       classname == "main-div" ? setClassname("second-main-div") : setClassname("main-div");
+//       console.log(classname);
+//     }, [darkmode]
+//   )
   
-  return (
-    <>
-    <div class = {classname}>
-      {darkmode ? <Darkmode/> : <Lightmode/>}
-      <button onClick={()=>{setDarkmode(!darkmode)}}>Changemode</button>
-    </div>
-    <Pc a={10} b={20}></Pc>
-    </>
-  );
-}
+//   return (
+//     <>
+//     <div class = {classname}>
+//       {darkmode ? <Darkmode/> : <Lightmode/>}
+//       <button onClick={()=>{setDarkmode(!darkmode)}}>Changemode</button>
+//     </div>
+//     <Pc a={10} b={20}></Pc>
+//     </>
+//   );
+// }
 
 export default App

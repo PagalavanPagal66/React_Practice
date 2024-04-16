@@ -14,3 +14,33 @@
   background-color: blanchedalmond;
   color : blue;
 }
+
+.container{
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto;
+  height: 100%;
+  width: auto;  
+}
+
+.img1{
+  height: 100px;
+  width: auto;
+  background-color: black;
+}
+
+.img2 {
+    height: 100px;
+    width: auto;
+    background-color: brown;
+}
+
+.span{
+  background-color: gold;
+  border-radius: 10%;
+  align-content: center ;
+}
+
+.reset{
+  background-color: coral;
+}
