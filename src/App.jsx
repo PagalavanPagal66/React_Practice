@@ -37,56 +37,62 @@ import Subtract from './assets/Subtract.png'
 //   )
 // }
 
-// const Darkmode = () => {
-//   return (
-//     <div>
-//       darkmode
-//     </div>
-//   );
-// }
-
-// const Lightmode = () => {
-//   return (
-//     <div>
-//       lightmode
-//     </div>
-//   );
-// }
-
-// function App(){
-//   const [darkmode,setDarkmode] = useState(0);
-//   const [classname,setClassname] = useState("main-div");
-//   useEffect(
-//     () => {
-//       classname == "main-div" ? setClassname("second-main-div") : setClassname("main-div");
-//       console.log(classname);
-//     }, [darkmode]
-//   )
-  
-//   return (
-//     <>
-//     <div class = {classname}>
-//       {darkmode ? <Darkmode/> : <Lightmode/>}
-//       <button onClick={()=>{setDarkmode(!darkmode)}}>Changemode</button>
-//     </div>
-//     <Pc a={10} b={20}></Pc>
-//     </>
-//   );
-// }
-
-const App = () =>{
-  
-  const [count,updateCount] = useState(0);
-  useEffect(
-    ()=>{
-      alert("YES");
-    }
-  )
-  console.log("new"); 
+const Darkmode = () => {
   return (
     <div>
-      <button onClick={()=>updateCount(count+1)}>button</button>
+      darkmode
     </div>
   );
 }
+
+const Lightmode = () => {
+  return (
+    <div>
+      lightmode
+    </div>
+  );
+}
+
+function App(){
+  const [darkmode,setDarkmode] = useState(0);
+  const [classname,setClassname] = useState("main-div");
+  useEffect(
+    () => {
+      classname == "main-div" ? setClassname("second-main-div") : setClassname("main-div");
+      console.log(classname);
+    }, [darkmode]
+  )
+  
+  return (
+    <>
+    <div class = {classname}>
+      {darkmode ? <Darkmode/> : <Lightmode/>}
+      <button onClick={()=>{setDarkmode(!darkmode)}}>Changemode</button>
+    </div>
+    </>
+  );
+}
+
+// const App = () =>{
+  
+//   const [count,updateCount] = useState(0);
+//   useEffect(
+//     ()=>{
+//       alert("YES");
+//     }
+//   )
+//   console.log("new"); 
+//   return (
+//     <div>
+//       <button onClick={()=>updateCount(count+1)}>button</button>
+//     </div>
+//   );
+// }
+
+// const App = () =>{
+//   return(
+//     <h1>VT</h1>
+//   );
+// }
+
 export default App
