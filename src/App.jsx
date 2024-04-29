@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import './App.css'
 import ADD from './assets/ADD.jpg'
 import Subtract from './assets/Subtract.png'
+import Virat from './assets/virat_pic.jpeg'
 
 // const VT = () =>{
 //   return(
@@ -37,41 +38,41 @@ import Subtract from './assets/Subtract.png'
 //   )
 // }
 
-const Darkmode = () => {
-  return (
-    <div>
-      darkmode
-    </div>
-  );
-}
+// const Darkmode = () => {
+//   return (
+//     <div>
+//       darkmode
+//     </div>
+//   );
+// }
 
-const Lightmode = () => {
-  return (
-    <div>
-      lightmode
-    </div>
-  );
-}
+// const Lightmode = () => {
+//   return (
+//     <div>
+//       lightmode
+//     </div>
+//   );
+// }
 
-function App(){
-  const [darkmode,setDarkmode] = useState(0);
-  const [classname,setClassname] = useState("main-div");
-  useEffect(
-    () => {
-      classname == "main-div" ? setClassname("second-main-div") : setClassname("main-div");
-      console.log(classname);
-    }, [darkmode]
-  )
+// function App(){
+//   const [darkmode,setDarkmode] = useState(0);
+//   const [classname,setClassname] = useState("main-div");
+//   useEffect(
+//     () => {
+//       classname == "main-div" ? setClassname("second-main-div") : setClassname("main-div");
+//       console.log(classname);
+//     }, [darkmode]
+//   )
   
-  return (
-    <>
-    <div class = {classname}>
-      {darkmode ? <Darkmode/> : <Lightmode/>}
-      <button onClick={()=>{setDarkmode(!darkmode)}}>Changemode</button>
-    </div>
-    </>
-  );
-}
+//   return (
+//     <>
+//     <div class = {classname}>
+//       {darkmode ? <Darkmode/> : <Lightmode/>}
+//       <button onClick={()=>{setDarkmode(!darkmode)}}>Changemode</button>
+//     </div>
+//     </>
+//   );
+// }
 
 // const App = () =>{
   
@@ -94,5 +95,14 @@ function App(){
 //     <h1>VT</h1>
 //   );
 // }
+
+
+const App = () => {
+  return(
+    <>
+    <img src={Virat}></img>
+    </>
+  );
+}
 
 export default App
