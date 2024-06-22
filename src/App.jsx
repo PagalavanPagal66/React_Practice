@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import './App.css'
-import ADD from './assets/ADD.jpg'
-import Subtract from './assets/Subtract.png'
-import Virat from './assets/virat_pic.jpeg'
+// import './App.css'
+// import ADD from './assets/ADD.jpg'
+// import Subtract from './assets/Subtract.png'
+// import Virat from './assets/virat_pic.jpeg'
 
 // const VT = () =>{
 //   return(
@@ -54,7 +54,7 @@ import Virat from './assets/virat_pic.jpeg'
 //   );
 // }
 
-// function App(){
+// const App = () => {
 //   const [darkmode,setDarkmode] = useState(0);
 //   const [classname,setClassname] = useState("main-div");
 //   useEffect(
@@ -64,15 +64,28 @@ import Virat from './assets/virat_pic.jpeg'
 //     }, [darkmode]
 //   )
   
+//   const [temp,setTemp] = useState({year:2024,name:"pagal"});
+
+//   function changeobject(){
+//     setTemp(
+//       (value)=>(
+//         {...value, year : 2025}
+//       )
+//     )
+//   }
+
 //   return (
 //     <>
 //     <div class = {classname}>
 //       {darkmode ? <Darkmode/> : <Lightmode/>}
 //       <button onClick={()=>{setDarkmode(!darkmode)}}>Changemode</button>
 //     </div>
+//     <button onClick={changeobject}>Change</button>
+//     <p>{temp.year}</p>
 //     </>
 //   );
 // }
+// export default App;
 
 // const App = () =>{
   
@@ -90,19 +103,13 @@ import Virat from './assets/virat_pic.jpeg'
 //   );
 // }
 
-// const App = () =>{
-//   return(
-//     <h1>VT</h1>
-//   );
-// }
+import Logincard from './components/logincard.jsx'
 
-
-const App = () => {
+const App = () =>{
   return(
     <>
-    <img src={Virat}></img>
+      <Logincard/>
     </>
   );
 }
-
-export default App
+export default App;
